@@ -32,8 +32,11 @@ Route::get('/logout', [LoginController::class, 'logout']);
 Route::get('/', [UserController::class, 'index'])->middleware('auth');
 Route::get('/users',[UserController::class,'users'])->middleware('auth');
 Route::get('/jsonUsers',[UserController::class,'jsonUsers'])->middleware('auth');
-Route::get('/userAccMenu',[UserAccMenuController::class,'userAccMenu'])->middleware('auth');
 
 // menus
 Route::get('/menus',[MenuController::class,'menus'])->middleware('auth');
 Route::get('/jsonMenus',[MenuController::class,'jsonMenus'])->middleware('auth');
+
+// UserAccMenu
+Route::get('/userAccMenu',[UserAccMenuController::class,'userAccMenu'])->middleware('auth');
+Route::get('/jsonUserAccMenu',[UserAccMenuController::class,'jsonUserAccMenu'])->middleware('auth');

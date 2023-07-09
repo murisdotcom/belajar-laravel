@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('container')
-    <table class="table table-sm table-striped table-hover table-bordered">
+    <table class="table table-sm table-striped table-hover table-bordered" id="userAccmenuTable">
         <thead>
             <tr>
                 <th>No</th>
@@ -15,7 +15,7 @@
                 <th>Action</th>
             </tr>
         </thead>
-        <tbody>
+        {{-- <tbody>
             @php
                 $no = 1;
             @endphp
@@ -36,6 +36,6 @@
                     </td>
                 </tr>
             @endforeach
-        </tbody>
+        </tbody> --}}
     </table>
 @endsection
