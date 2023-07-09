@@ -1,16 +1,17 @@
 @extends('layouts.main')
 @section('container')
-    <table class="table table-sm table-striped table-hover table-bordered">
+    <table class="table table-sm table-striped table-hover table-bordered" id="usersTable">
         <thead>
             <tr>
                 <th>No</th>
                 <th>Username</th>
                 <th>Section</th>
                 <th>Nik</th>
+                <th>Email</th>
                 <th>Action</th>
             </tr>
         </thead>
-        <tbody>
+        {{-- <tbody>
             @php
                 $no = 1;
             @endphp
@@ -26,6 +27,6 @@
                     </td>
                 </tr>
             @endforeach
-        </tbody>
+        </tbody> --}}
     </table>
 @endsection

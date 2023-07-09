@@ -17,6 +17,10 @@
 
     <!-- Custom styles for this template -->
     <link href="{{ asset('css/myCss/sign-in.css') }}" rel="stylesheet">
+
+    {{-- for icon bootstrap 5 --}}
+    <link href="{{ asset('bootstrap-icons/font/bootstrap-icons.min.css') }}" rel="stylesheet">
+
 </head>
 
 <body class="d-flex align-items-center py-4 bg-body-tertiary">
@@ -47,7 +51,8 @@
         Remember me
       </label>
     </div> -->
-            <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+            <button class="btn btn-primary w-100 py-2" type="submit"><i class="bi bi-box-arrow-in-right"> Sign
+                    in</i></button>
             <p class="mt-5 text-center text-body-secondary">muris.com &copy;2023</p>
         </form>
     </main>

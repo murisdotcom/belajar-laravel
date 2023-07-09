@@ -1,0 +1,15 @@
+$(document).ready(function(){
+    $('#usersTable').DataTable({
+        processing:true,
+        serverSide:true,
+        ajax:'/jsonUsers',
+        columns:[
+            {data:'noUrut',name:'noUrut'},
+            {data:'username',name:'username'},
+            {data:'section_cd',name:'section_cd'},
+            {data:'nik',name:'nik'},
+            {data:'email',name:'email'},
+            {data:'action',name:'action'}
+        ]
+    })
+})

@@ -16,6 +16,12 @@
 
     <link href="{{ asset('css/myCdd/navbar-fixed.css') }}" rel="stylesheet">
 
+    {{-- Bootstrap icon --}}
+    <link href="{{ asset('bootstrap-icons/font/bootstrap-icons.min.css') }}" rel="stylesheet">
+
+    {{-- Datatables --}}
+    <link href="{{ asset('css/myCss/dataTables.css') }}" rel="stylesheet">
+
 </head>
 
 <body class="d-flex align-items-center py-4 bg-body-tertiary">
@@ -36,7 +42,8 @@
                         <a class="nav-link {{ $active == 'Menus' ? 'active' : '' }}" href="/menus">Menus</a>
                     </li>
                 </ul>
-                <a href="/logout" class="btn btn-outline-primary"><i class="bi bi-person-circle"> Logout</i></a>
+                <a href="/logout" class="btn btn-outline-primary"><i class="bi bi-person-circle"><i
+                            class="bi bi-door-open"> Logout</i></i></a>
                 <!-- <ul class="dropdown-menu gap-1 p-2 position-relative rounded-3 mx-0 shadow w-220px" data-bs-theme="light">
           <li><a class="dropdown-item rounded-2 active" href="#">Action</a></li>
           <hr class="dropdown-divider">
@@ -55,6 +62,9 @@
     </div>
 
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('js/myScript/jQuery.min.js') }}"></script>
+    <script src="{{ asset('js/myScript/dataTables.min.js') }}"></script>
+    <script src="{{ asset('js/myScript/loadDataTables.js') }}"></script>
     @include('sweetalert::alert')
 
 </body>

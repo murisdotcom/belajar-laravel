@@ -166,6 +166,9 @@ return [
         // for sweetAlert
         RealRashid\SweetAlert\SweetAlertServiceProvider::class,
 
+        // for datatables
+        Yajra\DataTables\DataTablesServiceProvider::class,
+
 
         /*
          * Package Service Providers...
@@ -237,6 +240,9 @@ return [
 
         // for sweetalert
         'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
+
+        // for datatables
+        'DataTables' => Yajra\DataTables\Facades\DataTables::class,
 
     ],
 
