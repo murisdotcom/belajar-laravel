@@ -1,9 +1,11 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
+
+
 /*
 |- ---- ----------------------------------------------------- ----- -----------
 | Web Routes
@@ -19,5 +21,7 @@ use App\Http\Controllers\LoginController;
 //     return view('welcome');
 // });
 
-Route::get('/login', [LoginController::class, 'index']);
-Route::get('/', [UserController::class, 'index']);
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::get('/logout', [LoginController::class, 'logout']);
+Route::get('/', [UserController::class, 'index'])->middleware('auth');
