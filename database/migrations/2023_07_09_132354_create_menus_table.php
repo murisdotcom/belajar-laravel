@@ -18,8 +18,8 @@ class CreateMenusTable extends Migration
             $table->string('form_id', 10);
             $table->string('form_nm', 50);
             $table->integer('parent');
-            $table->string('url', 50);
-            $table->string('fa_icon', 50);
+            $table->string('url', 50)->nullable();
+            $table->string('fa_icon', 50)->nullable();
             $table->timestamps();
         });
     }
