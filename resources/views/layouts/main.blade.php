@@ -22,21 +22,18 @@
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Fixed navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
+                <a class="navbar-nav nav-link {{ $active == 'home' ? 'text-primary' : '' }}" href="/">Home</a>
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link {{ $active == 'Users' ? 'active' : '' }}" href="/users">Users</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link {{ $active == 'userAccMenu' ? 'active' : '' }}" href="/userAccMenu">User Acc
+                            Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
+                        <a class="nav-link {{ $active == 'Menus' ? 'active' : '' }}" href="/menus">Menus</a>
                     </li>
                 </ul>
                 <a href="/logout" class="btn btn-outline-primary"><i class="bi bi-person-circle"> Logout</i></a>

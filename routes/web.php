@@ -4,6 +4,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\MenuController;
+use App\Http\Controllers\UserAccMenuController;
 
 
 /*
@@ -25,3 +27,7 @@ Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::get('/logout', [LoginController::class, 'logout']);
 Route::get('/', [UserController::class, 'index'])->middleware('auth');
+
+Route::get('/users',[UserController::class,'users']);
+Route::get('/userAccMenu',[UserAccMenuController::class,'userAccMenu']);
+Route::get('/menus',[MenuController::class,'menus']);
