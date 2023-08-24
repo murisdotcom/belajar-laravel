@@ -42,8 +42,9 @@
                         <a class="nav-link {{ $active == 'Menus' ? 'active' : '' }}" href="/menus">Menus</a>
                     </li>
                 </ul>
-                <a href="/logout" class="btn btn-outline-primary"><i class="bi bi-person-circle"><i
-                            class="bi bi-door-open"> Logout</i></i></a>
+                <a href="/logout" class="btn btn-outline-primary">
+                    <i class="bi bi-door-open"> Logout</i>
+                </a>
                 <!-- <ul class="dropdown-menu gap-1 p-2 position-relative rounded-3 mx-0 shadow w-220px" data-bs-theme="light">
           <li><a class="dropdown-item rounded-2 active" href="#">Action</a></li>
           <hr class="dropdown-divider">
@@ -65,6 +66,8 @@
     <script src="{{ asset('js/myScript/jQuery.min.js') }}"></script>
     <script src="{{ asset('js/myScript/dataTables.min.js') }}"></script>
     <script src="{{ asset('js/myScript/loadDataTables.js') }}"></script>
+    <script src="{{ asset('js/myScript/instascan.min.js') }}"></script>
+    <script src="{{ asset('js/myScript/scanData.js') }}"></script>
     @include('sweetalert::alert')
 
 </body>
