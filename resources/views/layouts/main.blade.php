@@ -68,6 +68,39 @@
     <script src="{{ asset('js/myScript/loadDataTables.js') }}"></script>
     <script src="{{ asset('js/myScript/instascan.min.js') }}"></script>
     <script src="{{ asset('js/myScript/scanData.js') }}"></script>
+    <script src="{{ asset('js/myScript/openCamera.js') }}"></script>
+    <script>
+        const canvas = document.getElementById('gambarCanvas');
+        const context = canvas.getContext('2d');
+        const ambilGambarButton = document.getElementById('ambilGambarButton');
+
+        ambilGambarButton.addEventListener('click', function() {
+            // Coba akses kamera
+            navigator.mediaDevices
+                .getUserMedia({
+                    video: true
+                })
+                .then(function(stream) {
+                    // Tampilkan aliran kamera di canvas
+                    const video = document.createElement('video');
+                    video.srcObject = stream;
+                    video.onloadedmetadata = function(e) {
+                        video.play();
+                    };
+
+                    context.clearRect(0, 0, canvas.width, canvas.height);
+                    context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+                    // Hentikan akses kamera
+                    stream.getTracks().forEach(function(track) {
+                        track.stop();
+                    });
+                })
+                .catch(function(error) {
+                    console.error('Gagal mengakses kamera: ' + error);
+                });
+        });
+    </script>
     @include('sweetalert::alert')
 
 </body>

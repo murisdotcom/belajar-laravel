@@ -40,3 +40,5 @@ Route::get('/jsonMenus',[MenuController::class,'jsonMenus'])->middleware('auth')
 // UserAccMenu
 Route::get('/userAccMenu',[UserAccMenuController::class,'userAccMenu'])->middleware('auth');
 Route::get('/jsonUserAccMenu',[UserAccMenuController::class,'jsonUserAccMenu'])->middleware('auth');
+
+Route::post('/uploadImage',[UserController::class,'uploadImage'])->name('uploadImage');

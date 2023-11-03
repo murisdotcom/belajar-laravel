@@ -40,4 +40,17 @@ class UserController extends Controller
         })
         ->toJson();
     }
+
+    public function uploadImage(Request $request){
+        $gambarDataUrl = $request->input('gambar_data_url');
+        list($type, $gambarDataUrl) = explode(';', $gambarDataUrl);
+        list(, $gambarDataUrl) = explode(',', $gambarDataUrl);
+        $gambarData = base64_decode($gambarDataUrl);
+
+        $namaFile = 'gambar_' . time() . '.png';
+        $lokasiPenyimpanan = public_path('gambar');
+        file_put_contents($lokasiPenyimpanan . '/' . $namaFile, $gambarData);
+
+        return redirect()->back()->with('toast_success','Data berhasil');
+    }
 }
