@@ -29,4 +29,39 @@
             @endforeach
         </tbody> --}}
     </table>
+
+    <video id="video" width="640" height="480" autoplay></video>
+    <button onclick="switchCamera()">Switch Camera</button>
+
+    <script>
+        let currentCamera = 'environment'; // Default to back camera
+
+        async function startCamera() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({
+                    video: {
+                        facingMode: currentCamera
+                    }
+                });
+                const videoElement = document.getElementById('video');
+                videoElement.srcObject = stream;
+            } catch (error) {
+                console.error('Error accessing camera:', error);
+            }
+        }
+
+        function switchCamera() {
+            currentCamera = currentCamera === 'user' ? 'environment' : 'user';
+            // Stop the current stream
+            const videoElement = document.getElementById('video');
+            const stream = videoElement.srcObject;
+            const tracks = stream.getTracks();
+            tracks.forEach(track => track.stop());
+            // Start the new camera
+            startCamera();
+        }
+
+        // Start the camera when the page loads
+        startCamera();
+    </script>
 @endsection
