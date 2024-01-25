@@ -30,7 +30,7 @@
         </tbody> --}}
     </table>
 
-    <video id="video" width="640" height="480" autoplay></video>
+    {{-- <video id="video" width="640" height="480" autoplay></video>
     <button onclick="switchCamera()">Switch Camera</button>
 
     <script>
@@ -63,5 +63,5 @@
 
         // Start the camera when the page loads
         startCamera();
-    </script>
+    </script> --}}
 @endsection

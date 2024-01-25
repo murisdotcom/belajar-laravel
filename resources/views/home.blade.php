@@ -1,8 +1,8 @@
 @extends('layouts.main')
 @section('container')
-    <script src="{{ asset('js/myScript/html5-qrcode.js') }}" type="text/javascript"></script>
+    {{-- <script src="{{ asset('js/myScript/html5-qrcode.js') }}" type="text/javascript"></script> --}}
     <h1>Home</h1>
-    <div class="card">
+    {{-- <div class="card">
         <div class="card-header">
             <h2>Qr-scanner</h2>
         </div>
@@ -40,8 +40,8 @@
             </div>
         </div>
     </div>
-    {{-- <img src="{{ asset('img/nisa.png') }}" alt="" srcset=""> --}}
-    {{-- <video src="" id="scanner"></video> --}}
+    <img src="{{ asset('img/nisa.png') }}" alt="" srcset="">
+    <video src="" id="scanner"></video>
 
 
     <script>
@@ -67,5 +67,5 @@
             /* verbose= */
             false);
         html5QrcodeScanner.render(onScanSuccess, onScanFailure);
-    </script>
+    </script> --}}
 @endsection

@@ -37,5 +37,19 @@
                 </tr>
             @endforeach
         </tbody> --}}
+        <!-- resources/views/upload.blade.php -->
+        <div class="row mb-4">
+            <div class="col-4">
+                <div class="input-group" style="display: flex;justify-content:space-between">
+                    <form action="{{ route('uploadExcel') }}" method="post" enctype="multipart/form-data">
+                        @csrf
+                        <input type="file" class="form-control" name="excel_file" accept=".xls, .xlsx">
+                        <button type="submit" class="btn btn-primary">Upload</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-8"></div>
+        </div>
+
     </table>
 @endsection

@@ -42,3 +42,5 @@ Route::get('/userAccMenu',[UserAccMenuController::class,'userAccMenu'])->middlew
 Route::get('/jsonUserAccMenu',[UserAccMenuController::class,'jsonUserAccMenu'])->middleware('auth');
 
 Route::post('/uploadImage',[UserController::class,'uploadImage'])->name('uploadImage');
+
+Route::post('/uploadExcel',[UserAccMenuController::class,'uploadExcel'])->name('uploadExcel');

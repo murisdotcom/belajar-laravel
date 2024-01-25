@@ -66,9 +66,9 @@
     <script src="{{ asset('js/myScript/jQuery.min.js') }}"></script>
     <script src="{{ asset('js/myScript/dataTables.min.js') }}"></script>
     <script src="{{ asset('js/myScript/loadDataTables.js') }}"></script>
-    <script src="{{ asset('js/myScript/instascan.min.js') }}"></script>
+    {{-- <script src="{{ asset('js/myScript/instascan.min.js') }}"></script>
     <script src="{{ asset('js/myScript/scanData.js') }}"></script>
-    <script src="{{ asset('js/myScript/openCamera.js') }}"></script>
+    <script src="{{ asset('js/myScript/openCamera.js') }}"></script> --}}
     <script>
         const canvas = document.getElementById('gambarCanvas');
         const context = canvas.getContext('2d');
