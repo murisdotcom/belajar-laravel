@@ -44,3 +44,5 @@ Route::get('/jsonUserAccMenu',[UserAccMenuController::class,'jsonUserAccMenu'])-
 Route::post('/uploadImage',[UserController::class,'uploadImage'])->name('uploadImage');
 
 Route::post('/uploadExcel',[UserAccMenuController::class,'uploadExcel'])->name('uploadExcel');
+// test download excel
+Route::post('/exportExcel',[UserAccMenuController::class,'exportExcel'])->name('exportExcel');

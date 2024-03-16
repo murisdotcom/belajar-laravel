@@ -53,4 +53,10 @@ class UserController extends Controller
 
         return redirect()->back()->with('toast_success','Data berhasil');
     }
+
+    public function exportExcel(Request $request)
+    {
+
+    }
+
 }
